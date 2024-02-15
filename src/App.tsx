@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import ComponentNavbar from "./components/ComponentNavbar";
+import ComponentAllArticles from "./components/ComponentAllArticles";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <header>
         <ComponentNavbar />
       </header>
-      <main></main>
+      <main>
+        <ComponentAllArticles />
+      </main>
       <footer></footer>
     </>
   );
