@@ -1,11 +1,14 @@
 import { Col, Card, Button } from "react-bootstrap";
 import IArticle from "../Interfaces/Article";
+import { useNavigate } from "react-router-dom";
 
 interface articleProps {
   articleData: IArticle;
 }
 
 const ComponentSingleArticle = ({ articleData }: articleProps) => {
+  const navigate = useNavigate();
+
   return (
     <Col xs={12} md={6} lg={4}>
       <Card>
@@ -13,7 +16,14 @@ const ComponentSingleArticle = ({ articleData }: articleProps) => {
 
         <Card.Body>
           <Card.Title>{articleData.title}</Card.Title>
-          <Button variant="primary">More infos</Button>
+          <Button
+            variant="primary"
+            onClick={() => {
+              navigate("/detail");
+            }}
+          >
+            More infos
+          </Button>
         </Card.Body>
       </Card>
     </Col>
